@@ -1,0 +1,8 @@
+import openai
+openai.api_key = 'KsapOv7PxuAkuX8kLaMLSGuQbWPB8q4LjC927d4REdpjf3Ua3U9YJRnzsWHrLohKlF5VaDlLiZOt7SycGigpX7atu75uHXAfSnS55Q23lgzlxtl6rffdxSRlBoO9Gf9g
+'
+model_engine = 'text-davinci-003'
+prompt = str(input())
+completion = openai.Completion.create(engine= model_engine,prompt=prompt,max_tokens=1024, n=1, stop=None,temperature=0.5)
+response = completion.choices[0].text
+print(response)
